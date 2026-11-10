@@ -7,7 +7,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {
   CakeSlice,
   ArrowUp,
-  Instagram,
   Heart,
   Sparkles,
 } from "lucide-react";
@@ -20,6 +19,27 @@ const footerLinks = [
   { label: "درباره ما", href: "#about" },
   { label: "تماس با ما", href: "#contact" },
 ];
+
+function InstagramIcon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="18"
+      height="18"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.7"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <rect x="3" y="3" width="18" height="18" rx="5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" />
+    </svg>
+  );
+}
 
 export default function Footer() {
   const footerRef = useRef<HTMLElement | null>(null);
@@ -85,6 +105,7 @@ export default function Footer() {
       >
         {/* Brand and navigation */}
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.3fr_0.8fr_1fr] lg:gap-16">
+
           {/* Brand */}
           <div>
             <a

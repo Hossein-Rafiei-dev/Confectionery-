@@ -2,14 +2,19 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  experimental: {
-    agentFeedback: true,
-  },
+  // Generate static HTML files for GitHub Pages
+  output: "export",
 
-  cacheComponents: true,
-  partialPrefetching: true,
+  // GitHub repository path
+  basePath: "/Confectionery-",
 
+  // Generate index.html for each route
+  trailingSlash: true,
+
+  // Disable Next.js image optimization
   images: {
+    unoptimized: true,
+
     remotePatterns: [
       {
         protocol: "https",
@@ -24,6 +29,7 @@ const nextConfig: NextConfig = {
     ],
   },
 
+  // Keep existing Tailwind Turbopack configuration
   turbopack: {
     rules: {
       "*.css": {

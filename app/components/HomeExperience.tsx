@@ -10,7 +10,7 @@ export default function HomeExperience() {
   const lidRef = useRef<SVGGElement>(null);
   const cakeRef = useRef<SVGGElement>(null);
   const ribbonRef = useRef<SVGGElement>(null);
-  const sparklesRef = useRef<SVGGElement>(null);
+const sparklesRef = useRef<SVGSVGElement>(null);
   const textRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
